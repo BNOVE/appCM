@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='.')  # Configura para buscar templates na pasta principal
 
 # Função para carregar motoristas
 def carregar_motoristas():
