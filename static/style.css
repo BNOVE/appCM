@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color: #333;
+}
+
+.logo {
+    width: 100%; /* Ajuste conforme necessário */
+    max-width: 200px; /* Limita o tamanho máximo */
+    height: auto; /* Mantém a proporção */
+    object-fit: contain; /* Assegura que a imagem não distorça */
+}
+
+.logo2 {
+    width: 200px !important; /* Força o estilo a ser aplicado */
+    height: auto !important;
+}
+
