@@ -47,7 +47,7 @@ def resumo():
     print(f"Motorista encontrado: {motorista_data}")  # Depuração
 
     # URL do arquivo HTML no GitHub
-    url = "https://raw.githubusercontent.com/BNOVE/appCM/main/resumo.html"
+    url = "https://raw.githubusercontent.com/BNOVE/appCM/main/resumo.html" #teste
 
     # Fazendo a requisição do arquivo HTML
     response = requests.get(url)
