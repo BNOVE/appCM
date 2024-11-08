@@ -57,7 +57,6 @@
             justify-content: space-around;
             width: 100%;
             max-width: 450px;
-            margin-bottom: 1.5rem;
         }
 
         .button-container a {
@@ -134,7 +133,7 @@
     <div class="container">
         <div class="header">
             {% if motorista %}
-                Olá, {{ motorista['MOTORISTA'] if 'MOTORISTA' in motorista else 'Motorista' }}
+                Olá, {{ motorista.get('MOTORISTA', 'Motorista não encontrado') }}
             {% else %}
                 Motorista não localizado
             {% endif %}
@@ -153,7 +152,7 @@
                 <p class="total">{{ motorista['QUANTIDADE']|int if 'QUANTIDADE' in motorista else 'Não disponível' }}</p>
 
                 <p> </p>
-                <img class="linha" src="{{ url('https://raw.githubusercontent.com/BNOVE/appCM/main/static/icones/linha.png') }}" alt="Linha">
+                <img src="{{ url_for('static', filename='icones/linha.png') }}" alt="linha">
                 <p> </p>
 
                 <h3>ID do Motorista:</h3>
@@ -181,7 +180,7 @@
                 <p>{{ motorista['VALOR_BASICO'] if 'VALOR_BASICO' in motorista else 'Não disponível' }}</p>
 
                 <p> </p>
-                <img class="linha" src="{{ url('https://raw.githubusercontent.com/BNOVE/appCM/main/static/icones/linha.png') }}" alt="Linha">
+                <img src="{{ url_for('static', filename='icones/linha.png') }}" alt="linha">
                 <p> </p>
 
                 <h3>Valor Ajuda de Custo:</h3>
@@ -209,7 +208,7 @@
                 <p>{{ motorista['LIQUIDO'] if 'LIQUIDO' in motorista else 'Não disponível' }}</p>
 
                 <p> </p>
-                <img class="linha" src="{{ url('https://raw.githubusercontent.com/BNOVE/appCM/main/static/icones/linha.png') }}" alt="Linha">
+                <img src="{{ url_for('static', filename='icones/linha.png') }}" alt="linha">
                 <p> </p>
 
                 <h3>VALOR FINAL</h3>
